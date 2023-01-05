@@ -1,0 +1,116 @@
+body {
+    background-image: url('images/holdBackground.webp');
+}
+
+header {
+    height: 2em;
+    text-align: center;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    margin-top: -10px;
+}
+
+header h1 {
+    color: #00f801;
+    display: inline;
+    font-size: 2em;
+
+}
+
+.buildBox {
+    /* width: 980px;
+    height: 292px; */
+    width: 100%;
+    height: 292px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-image: url('images/buildBackground.png');
+    background-size: cover; */
+    background-color: black;
+    position: sticky;
+    top: 2em;
+    display: flex;
+}
+
+#buildBoxBG {
+    width: 980px;
+    height: 292px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+    display: inline;
+    float: right;
+}
+
+.output {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+.box {
+    border: 1px solid red;
+    display: block;
+    color: black;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.partDiv {
+    display: flex;
+    flex-direction: column;
+    width: 305px;
+    height: 370px;
+    margin-bottom: 1em;
+    background-color: rgba(184, 180, 180, 0.75);
+    border: 1px solid yellow;
+}
+
+.brand {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    margin-bottom: .5em;
+}
+
+.price {
+    color: #00f801;
+    text-align: right;
+    font-size: 1.5em;
+
+}
+
+.box.mainImg {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    width: 280px;
+    object-fit: contain;
+}
+
+.partDiv>#brandName {
+    order: 2;
+}
+
+.partDiv>#itemName {
+    order: 3;
+}
+
+.partDiv>#pfaPrice {
+    order: 4;
+}
+
+.partDiv>#itemImage {
+    order: 1;
+}
