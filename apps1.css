@@ -1,3 +1,7 @@
+html {
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('images/holdBackground.webp');
 }
@@ -9,6 +13,7 @@ header {
     position: sticky;
     top: 0px;
     margin-top: -10px;
+    z-index: 1;
 }
 
 header h1 {
@@ -31,6 +36,7 @@ header h1 {
     position: sticky;
     top: 2em;
     display: flex;
+    z-index: 1;
 }
 
 #buildBoxBG {
@@ -49,12 +55,18 @@ header h1 {
 
 .output {
     width: 100%;
-    margin: auto;
+    margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.699);
+    z-index: 0;
+}
+
+.output h1 {
+    color: #00f801;
+
 }
 
 .box {
@@ -63,11 +75,13 @@ header h1 {
     color: black;
     font-size: 1.25em;
     font-weight: 600;
+
 }
 
 .partDiv {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 305px;
     height: 370px;
     margin-bottom: 1em;
@@ -88,6 +102,9 @@ header h1 {
     color: #00f801;
     text-align: right;
     font-size: 1.5em;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
 
 }
 
