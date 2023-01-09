@@ -1,4 +1,5 @@
 const output = document.querySelector('.output');
+// const outputH1 = document.getElementById('outputH1');
 const btn = document.querySelector('button');
 const url = 'https://docs.google.com/spreadsheets/d/';
 const ssid = '11RAVkCjURLm1gCHEt3hXSV3lyxAgODoPLaecMbCJL-Y';
@@ -6,8 +7,53 @@ const q1 = '/gviz/tq?';
 const q2 = 'tqx=out:json';
 const q3 = 'sheet=Lowers';
 
+loadPage();
+
+
 btn.addEventListener('click', getData);
 
+
+function loadPage() {
+    const outputH1 = document.createElement('h1');
+    outputH1.classList.add('outputH1');
+    outputH1.innerHTML = "Are you building a pistol or a rifle?"
+    output.append(outputH1);
+
+    let arType = document.createElement('div');
+    arType.classList.add('arType');
+    let img = document.createElement('img');
+    img.classList.add('arTypeImg');
+    img.src = "images/pistol.webp";
+    img.alt = "AR Pistol";
+    arType.append(img);
+    img = document.createElement('img');
+    img.classList.add('arTypeImgHover');
+    img.src = "images/pistolGreen.webp";
+    img.alt = "AR Pistol";
+    arType.append(img);
+    let p = document.createElement('p');
+    p.innerHTML = "Pistol";
+    arType.append(p);
+    output.append(arType);
+
+    arType = document.createElement('div');
+    arType.classList.add('arType');
+    img = document.createElement('img');
+    img.classList.add('arTypeImg');
+    img.src = "images/rifle.webp";
+    img.alt = "AR Pistol";
+    arType.append(img);
+    img = document.createElement('img');
+    img.classList.add('arTypeImgHover');
+    img.src = "images/rifleGreen.webp";
+    img.alt = "AR Pistol";
+    arType.append(img);
+    p = document.createElement('p');
+    p.innerHTML = "rifle";
+    arType.append(p);
+    output.append(arType);
+
+}
 
 function getData() {
     let url1 = `${url}${ssid}${q1}&${q2}&${q3}`;

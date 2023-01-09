@@ -64,9 +64,10 @@ header h1 {
     z-index: 0;
 }
 
-.output h1 {
+.outputH1 {
     color: #00f801;
-
+    width: 100%;
+    text-align: center;
 }
 
 .box {
@@ -75,15 +76,52 @@ header h1 {
     color: black;
     font-size: 1.25em;
     font-weight: 600;
+}
 
+.arType {
+    display: flex;
+    width: auto;
+    margin-bottom: 2em;
+    border: 1px solid red;
+    display: block;
+    color: black;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #00f801;
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+
+}
+
+.arTypeImg {
+    display: inline-block;
+    margin: auto;
+    width: 75%;
+    object-fit: contain;
+}
+
+.arTypeImgHover {
+    display: inline-block;
+    margin: auto;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    object-fit: contain;
+    opacity: 0;
+    transform: opacity .2s;
+}
+
+.arTypeImgHover:hover {
+    opacity: 1;
 }
 
 .partDiv {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 305px;
-    height: 370px;
     margin-bottom: 1em;
     background-color: rgba(184, 180, 180, 0.75);
     border: 1px solid yellow;
